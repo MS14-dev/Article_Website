@@ -1,0 +1,111 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-dark fixed-top">
+  <a class="navbar-brand" href="/">Navbar</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/article/all" style="color: chartreuse;">All_Articles</a>
+      </li>
+   
+    
+    </ul>
+    <form class="form-inline my-2 my-lg-0" method="GET" action="/article/search">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" name="search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
+{{!-- mainDiv start here --}}
+<div class="container-fluid" id="mainDiv">
+    <div class="row">
+        <div class="col-md-4">
+          <h1 style="font-family: 'Arvo', serif;color:white;margin-top:50%;font-size:800%">MART</h1>
+          <p style="color: white;">An article (with the linguistic glossing abbreviation art) is a word that is used with a noun
+               (as a standalone word or a prefix or suffix) to specify
+               grammatical definiteness of the noun, and in some languages 
+               extending to volume or numerical scope.
+          </p>
+          <a href="https://en.wikipedia.org/wiki/Article_(grammar)">wikipedia</a>
+        </div>
+         <div class="col-md-4"></div>
+         <div class="col-md-4">
+            {{!-- loginDiv Start here --}}
+             <div class="container-fluid" style="">
+                  <div class="row">
+                 
+                      <div class="col-md-12 jumbotron" id="loginDiv">
+                          <h1 style="color: green;">LogIn<span><a href="/writer/signinLog">SignIn</a></span></h1>
+                          <form action="/writer/log" method="POST">
+           
+                               <input type="email" name="email" placeholder="email"><hr>
+                               <input type="password" name="password" placeholder="password"><hr>
+                               <button class="btn btn-success btn-block" type="submit" >Login</button>
+                          </form>
+                      </div>
+                  </div>
+             </div>
+
+         </div>
+    </div>
+</div>
+{{!-- mainDiv ends from here --}}
+
+<div class="container" style="margin-top: 5%;">
+  <div class="row">
+    <div class="col-md-4">
+      <h1><span><i class="far fa-newspaper"></i></span>Article</h1>
+      <p>Read latest articles and grow up with us.Power up your knowledge
+        .No any barriers search varity of range
+      </p>
+    </div>
+    
+    <div class="col-md-4">
+      <h1><span><i class="fas fa-pen-alt"></i></span>Writing</h1>
+      <p>Write your own ideas,Latest topics and many more.Maintain your passion in
+        fruitful way.Share thoughts and push others
+      </p>
+    </div>
+    
+    <div class="col-md-4">
+      <h1><span><i class="fas fa-users"></i></span>Commiunity</h1>
+      <p>Join with our coomunity,learn new methods passions.Tune up your skills and
+        continue your skills with strong commiunity
+      </p>
+    </div>
+  </div>
+</div>
+
+{{!-- article,writing and coomunity descriptin div ends here --}}
+{{!-- article-serveys div begin from here --}}
+<div class="container-fluid" style="margin-top: 5%;">
+  <div class="row">
+    <div class="col-md-6" id="article-serveys">
+      <h1 style="color: white;margin-top:20%;text-align:center"><span><i class="fas fa-globe-americas"></i></span>Connect to the globe</h1>
+      {{#each top_10}}
+       
+        <h4 style="color: white;">{{this.title}}</h4>
+        <h4 style="color: white;"> {{this.name}} </h4>
+        
+      
+      {{/each}}
+    </div>
+    
+    <div class="col-md-6" id="">
+        <h4>The top list</h4>
+        <ul>
+          <li >Latest top Articles <a href="/article/top">View</a></li>
+          <li >Top Article writers <a href="/writer/top">View</a></li>
+        </ul>
+    </div>
+  </div>
+</div>
+
+
+
+

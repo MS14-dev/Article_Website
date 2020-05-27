@@ -1,0 +1,23 @@
+#mainDiv{
+  background-image: url('../images/backImage_1.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  margin-top: 2%;
+}
+#loginDiv input,#writeDiv input,#writeDiv textarea ,#signinDiv input,#article-serveys input{
+  background: none;
+  border: none;
+  color: black;
+  width: 100%;
+  display: block;
+}
+#loginDiv{
+  background-color: rgba(255, 255, 255, 0.123);
+  margin-top: 20%;
+}
+#article-serveys{
+ background-color: rgb(15, 109, 15);
+ height: 100%;
+}
